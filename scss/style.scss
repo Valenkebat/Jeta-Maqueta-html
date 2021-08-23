@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$Rojo: #9e0c26;
+$Verde: #327284;
+$Tipografias: #f8f8f8;
+$Amarillo: #eaa513;
+$Padding-Contacto: 2% 2% 2% 2%;
+$Por100: 100%;
+$Barlow: 'Barlow', Arial, sans-serif;
+$Bebas: 'Bebas Neue', Arial, sans-serif;
+$flex: flex;
+$Col: column;
+$row: row;
+$Centrado: center;
+$espaciado: space-between;
+
+  
+@each $etiqueta in footer, header, nav, h1, navbar, nav-link{
+  @if $etiqueta == footer or $etiqueta == navbar{
+    @if $etiqueta == footer{
+      #{$etiqueta} { 
+        background-color: $Rojo;
+        padding: 1%;
+      }
+    }@else{
+        .#{$etiqueta}.navbar-expand-lg { 
+          background-color: $Rojo;
+        }
+      }
+    }
+    @else if $etiqueta == h1{
+      #{$etiqueta} {
+      font-family: $Bebas;
+      color: $Rojo;
+      }
+    }
+    @else if $etiqueta == nav-link{
+      #{$etiqueta} {
+      font-family: $Bebas;
+      color: $Rojo;
+      }
+    }
+}
+
+#contacto, section article p, .nav-link {
+    font-family: $Barlow;
+}
+
+body, html {
+  height: 100%;
+}
+
+h2 {
+  font-family: $Bebas;
+}
+
+.fondo-azul {
+    background-color: $Verde;
+    display: $flex;
+    flex-direction: $Col;
+    justify-content: $Centrado;
+}
+
+  .contenedor-fondo-azul {
+    display: $flex;
+    flex-direction: $row;
+    justify-content: $espaciado;
+    margin-bottom: 5%;
+  }
+
+.seccion-index{
+    display: $flex;
+    justify-content: $Centrado;
+    flex-direction: $Col;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+  }
+  .container-index {
+    display: $flex;
+    align-items: $Centrado;
+    justify-content: $Centrado;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+  }
+  .container-index div {
+    padding: 0% 2% 0% 2%;
+  }
+  
+  .titulo-index {
+    margin-top: 5rem;
+    text-align: $Centrado;
+  }
+  .boton-seccion-index {
+    height: 36px;
+    width: 235px;
+    margin: -20px -50px;
+    position: relative;
+    top: 30%;
+    bottom: 5%;
+    left: 46%;
+  }
+  .container-index img {
+    margin-bottom: 2px;
+    border-radius: 100%;
+  }
+
+  .quienes-somos {
+    padding: 4% 20% 3% 20%;
+    background-color: #327284;
+    display: $flex;
+    flex-direction: $Col;
+    justify-content: $Centrado;
+  
+  }
+  .quienes-somos h1{
+    font-family: $Bebas;
+    color: $Tipografias;
+  }
+  .quienes-somos p {
+    font-family: $Barlow;
+    font-size: 1.3rem;
+    color: $Tipografias;
+  }
+  
+  
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+  @media only screen and (max-width:800px){
+    header {
+      background-image: url(/img/Header/header-1-mobile.jpg);
+      background-size: cover;
+    }
+  }
+
+  header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Header/header-1-desktop.jpg");
+    height: 100vh;
+    background-position: center top;
+    background-size: cover;
+  }
